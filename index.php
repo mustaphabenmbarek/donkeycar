@@ -1,5 +1,4 @@
 <?php include_once('header.php'); ?>
-
 <main role="main" class="bg-grey-light">
     <div class="py-5 text-center container top-section">
         <div class="row py-lg-1">
@@ -74,4 +73,16 @@
 </script>
 
 </body>
+=======
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Réservation voiture</title>
+    </head>
+    <body>
+
+
+    </body>
 </html>
