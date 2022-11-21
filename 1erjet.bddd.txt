@@ -1,0 +1,18 @@
+location de vehicule:
+
+mettre en avant la gamme de vehicule
+
+pourquoi?
+evenementiel, visite
+
+vehicule (stock):
+carte grise, l'assurance, kmtrage, type/categorie
+
+lieu site de location: Paris
+
+la location:
+prix, les dates, date de remise des cles, acompte
+
+client:
+nom, prenom, mail, date de naissance, assurance, permis
+
