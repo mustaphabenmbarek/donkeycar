@@ -1,88 +1,146 @@
-<?php include_once('header.php'); ?>
-<main role="main" class="bg-grey-light">
-    <div class="py-5 text-center container top-section">
-        <div class="row py-lg-1">
-            <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="title-index-1">DonkeyAir</h1>
-                <h4 class="text-center mt-2 mb6">Évadez-vous dans les airs</h4>
-            </div>
-        </div>
+<?php include_once('headerincluded.php'); ?>
 
-        <form method="POST" class="text-center mt-2 small" id="">
-            <div class="form-group index-search-form">  
-                <select name="departure" id="index-select">
-                    <option value="">Aéroport de départ</option> 
-                    <?php foreach($departures as $departure): ?>
-                        <option value="<?php echo $departure->getId(); ?>" <?php if(!empty($_POST['departure']) && $_POST['departure'] == $departure->getId()) echo "selected"; ?>>
-                            <?php echo $departure->getName(); ?>
-                        </option> 
-                    <?php endforeach; ?>
-                </select>
-                <select name="arrival" id="index-select">
-                    <option value="">Aéroport d'arrivée</option> 
-                    <?php foreach($arrivals as $arrival): ?>
-                        <option value="<?php echo $arrival->getId(); ?>" <?php if(!empty($_POST['arrival']) && $_POST['arrival'] == $arrival->getId()) echo "selected"; ?>>
-                            <?php echo $arrival->getName(); ?>
-                        </option> 
-                    <?php endforeach; ?>
-                </select>
-                <span class="between-dates"> Période <span>
-                <input type="datetime-local" id="min_date" name="min_date" class="index-search-date" value="<?php if(!empty($_POST['min_date'])) {echo $mindt;} ?>" placeholder="<?php if(!empty($_POST['min_date'])) {echo $mindt;} else {echo "Du";} ?>" onfocus="(this.type='date')" onblur="(this.type='text')"></input>
-                <input type="datetime-local" id="max_date" name="max_date" class="index-search-date" value="<?php if(!empty($_POST['max_date'])) {echo $maxdt;} ?>" placeholder="<?php if(!empty($_POST['max_date'])) {echo $maxdt;} else {echo "Au";} ?>" onfocus="(this.type='date')" onblur="(this.type='text')"></input>
-            </div> 
-            <div class="button-search">
-                <button type="submit" class="btn btn-primary small mt-3 mb-3 pl-4" id="buttonSearch">Recherchez un vol</button>
-            </div>
-        </form>
-    </div>
-</main> 
+<?php
 
-<?php if(empty($_POST) || (($_POST['arrival'] === '') && ($_POST['departure'] === '') && ($_POST['min_date'] === '') && ($_POST['max_date'] === ''))): ?>
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <?php
+	$taille_Max = 2097152;
+	$extensions_Valides = array('jpeg', 'jpg', 'png', 'gif');
 
-                $promos = [$promo1 = "", $promo2 = "", $promo3 = ""];
-                PromosListView::render($promos);
+	if (isset($_FILES['file'])) {
 
-                ?>
-            </div>
-        </div>
-    </div>
-<?php else : ?>
-    <?php if(empty($flights)): ?>
-        <p class="mt-4 text-center text-secondary"><?php echo "Pas de résultats pour votre recherche" ?></p>
-        <a href="home.php" id="initSearch" class="text-center">Réinitialisez la recherche</a><br/>
-    <?php endif; ?>
-    <?php
-    
-    FlightsListView::render($flights);
+		$req="SELECT MAX(id) id FROM vehicules";
+		$req_exe=$bdd->prepare($req);
+		$req_exe->execute();
+		$check=$req_exe->rowCount($req);
 
-    ?>
-<?php endif; ?>
+		if ($check==0) {
+			$id=1;
+		} else {
+			if($data=$req_exe->fetch()){
+				$id=$data['id'];
+			}
+			
+		}
 
+		if ($_FILES['file']['size'] <= $taille_Max) {
+			$extensions_Upload = strtolower(substr(strrchr($_FILES['file']['name'], '.'), 1));
+
+			if (in_array($extensions_Upload, $extensions_Valides)) {
+
+				$chemin = "../images_voitures/".$id.".".$extensions_Upload;
+				$export = move_uploaded_file($_FILES['file']['tmp_name'], $chemin);
+
+				if ($export) {
+					$file = $id.".".$extensions_Upload;
+
+					$query=$bdd->prepare('UPDATE vehicules SET image = ? WHERE id = ?');
+					$query->execute(array($file,$id));
+					$query->closeCursor();
+
+					$successImage=true;
+
+				} 
+				else {
+					$successImage=false;
+					
+				}
+
+
+			} else {
+				$successImage=false;
+				
+
+			}
+
+		} else {
+			
+			$successImage=false;
+		}
+
+	}
+
+?>
+<div class="coverAdminArea">
+	<div class="middleBar rmUnderline">
+		<table width="100%">
+			<tr>
+				<td width="300">
+					<i class="fa fa-cogs fa-2x"> </i>
+					<i class="fa fa-wrench fa-2x"> </i>
+					Donkeys Cars 
+				</td>
+				<td align="right" class="slogan">
+					<a href="#" style="color: #fff;">
+						<i class="fa fa-user"> </i>
+						Lazare
+					</a> |
+					<a href="../logout.php" style="color: #fff;">
+						<i class="glyphicon glyphicon-log-out"> </i>
+						Se déconnecter
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container-slideLeft rmUnderline">
+		<div class="row">
+			<div class="col-xs-3">
+				<div class="slideLeft">
+					<div class="dashboard">
+						<i class="fa fa-dashboard"> </i>
+						<b>Tableau de bord</b>
+					</div>
+					<div>
+						<div class="slideLeftItems" id="ajouter_vehicule">
+							<i class="fa fa-plus"> </i>
+							Ajouter un véhicule
+							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
+						</div>
+					</div>
+					<div>
+						<div class="slideLeftItems" id="modifier_vehicule">
+							<i class="fa fa-pencil"> </i>
+							Modifer un véhicule
+							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
+						</div>
+					</div>
+					<div>
+						<div class="slideLeftItems" id="afficher_vehicule">
+							<i class="fa fa-eye"> </i>
+							Afficher les véhicules
+							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
+						</div>
+					</div>
+					<div>
+						<div class="slideLeftItems" id="supprimer_vehicule">
+							<i class="fa fa-trash"> </i>
+							Supprimer un véhicule
+							<i class="fa fa-chevron-right pull-right" style="line-height: 40px;"> </i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-9">
+				<div class="dashboardBody" id="bodyAdminArea"><br />
+					<div class="<?php echo(isset($successImage) ? 'hide' : ''); ?>">
+						<br /><br /><br />
+						<center>
+							<h1 style="color: #aaa;">
+								<i class="fa fa-cogs fa-4x"> </i>
+								<i class="fa fa-wrench fa-4x"> </i><br /><br />
+								Espace de configuration 
+							</h1>
+						</center>
+					</div>
+					<?php
+						if (isset($successImage)&&$successImage==true) {
+							echo("<center><h2 style='color: #05c44d;'><i class='fa fa-check'> </i> Opéraion éffectuée !</h2><a href='' class='btn btn-default'><i style='font-size: 20px;' class='fa fa-home'> </i> Retour à l'acuueil</a></center>");
+						} elseif(isset($successImage)&&$successImage==false) {
+							echo("<center><h2 style='color: #f00b1b;'><i class='fa fa-times'> </i> Opéraion non éffectuée !</h2><a href='' class='btn btn-default'><i style='font-size: 20px;' class='fa fa-refresh'> </i> Réesayer</a></center>");
+						}
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <?php include_once('footer.php'); ?>
-
-<script type="text/javascript">
-    window.onload = () => {
-        document.getElementById('min_date').type = "text";
-        document.getElementById('max_date').type = "text";
-    };
-
-</script>
-
-</body>
-=======
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Réservation voiture</title>
-    </head>
-    <body>
-
-
-    </body>
-</html>

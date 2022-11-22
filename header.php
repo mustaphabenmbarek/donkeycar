@@ -1,28 +1,105 @@
-<!DOCTYPE html>
-<html lang="en" class="h-100">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
-
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    
-    <link href="jumbotron.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5474cfcdca.js" crossorigin="anonymous"></script>
-    <link href="./styles.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5474cfcdca.js" crossorigin="anonymous"></script>
-
-</head>
-
-
-<body class="d-flex flex-column h-100">
-
-<?php include_once('nav-bar.php'); ?>
+<div class="container rmUnderline header">
+	<div class="row">
+		<div class="col-xs-12 reservationForm">
+			<table width="100%">
+				<tr>
+					<td width="10%" class="home">
+						<div>
+							<a href="/site-location-vehicule/">
+								<i class="fa fa-home fa-2x"> </i>
+							</a>
+						</div>
+					</td>
+					<td class="celSearch">
+						<form id="search" method="post" action="/site-location-vehicule/resultats_recherche/">
+							<div class="input-group">
+								<input type="text" name="motCle" id="motCle" class="form-control" placeholder="Rechercher (marque, modèle, serie ou matricule)" />
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-danger" style="width: 60px;">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+					</td>
+					<td class="contact_a_propos0">
+						
+					</td>
+					<td align="right" class="contact_a_propos">
+						<a href="#">
+							<i class="fa fa-phone"> </i> Contacts
+						</a> |
+						<a href="#">
+							<i class="fa fa-info-circle"> </i> A propos
+						</a> |
+						<a href="#">
+							<i class="fa fa-bookmark"> </i> Mentions légales
+						</a> |
+						<a href="/site-location-vehicule/authentification_admin/">
+							<i class="fa fa-user"> </i><i class="fa fa-cogs"> </i> Administration
+						</a>
+					</td>
+					<td width="2.5%"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="middleBar rmUnderline">
+	
+	<ul>
+		<li>
+			<i class="fa fa-car fa-2x"> </i>
+			Donkey Cars
+		</li>
+		<li>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="help">
+				<i class="fa fa-question fa-2x"> </i>
+				Obtenir de l'aide
+			</a>
+		</li>
+		<li class="pull-right">
+			<span class="menuToggle">
+				<span></span>
+			</span>
+		</li>
+	</ul>
+	
+</div>
+<div class="menuMinWidth rmUnderline">
+	<a href="#">
+		<div>
+			<i class="fa fa-home"> </i>
+			Home
+		</div>
+	</a>
+	<a href="#">
+		<div>
+			<i class="fa fa-phone"> </i>
+			Contacts
+		</div>
+	</a>
+	<a href="#">
+		<div>
+			<i class="fa fa-info-circle"> </i>
+			A propos
+		</div>
+	</a>
+	<a href="#">
+		<div>
+			<i class="fa fa-bookmark"> </i>
+			Mentions légales
+		</div>
+	</a>
+	<a href="#">
+		<div>
+			<i class="fa fa-question"> </i>
+			Obtenir de l'aide
+		</div>
+	</a>
+	<a href="/site-location-vehicule/authentification_admin/">
+		<div>
+			<i class="fa fa-user"> </i><i class="fa fa-cogs"> </i> Administration
+		</div>
+	</a>
+</div>
