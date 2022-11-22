@@ -68,11 +68,7 @@
 					<i class="fa fa-wrench fa-2x"> </i>
 					Donkeys Cars 
 				</td>
-				<td align="right" class="slogan">
-					<a href="#" style="color: #fff;">
-						<i class="fa fa-user"> </i>
-						Lazare
-					</a> |
+					</a> 
 					<a href="../logout.php" style="color: #fff;">
 						<i class="glyphicon glyphicon-log-out"> </i>
 						Se déconnecter
@@ -137,6 +133,9 @@
 						} elseif(isset($successImage)&&$successImage==false) {
 							echo("<center><h2 style='color: #f00b1b;'><i class='fa fa-times'> </i> Opéraion non éffectuée !</h2><a href='' class='btn btn-default'><i style='font-size: 20px;' class='fa fa-refresh'> </i> Réesayer</a></center>");
 						}
+
+
+
 					?>
 				</div>
 			</div>
