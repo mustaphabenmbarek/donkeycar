@@ -27,7 +27,11 @@ CREATE TABLE `image` (
   `image_res` varchar(100) NOT NULL,
   `vehicle_id` int NOT NULL,
   `reservation_id` int NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `fk_image_reservation` (`reservation_id`),
+  KEY `fk_image_vehicle` (`vehicle_id`),
+  CONSTRAINT `fk_image_reservation` FOREIGN KEY (`reservation_id`) REFERENCES `reservation` (`id`),
+  CONSTRAINT `fk_image_vehicle` FOREIGN KEY (`vehicle_id`) REFERENCES `vehicle` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -49,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-21 11:35:55
+-- Dump completed on 2022-11-22 10:44:51

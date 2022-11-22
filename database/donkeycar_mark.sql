@@ -26,7 +26,7 @@ CREATE TABLE `mark` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name_mark` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,6 +35,7 @@ CREATE TABLE `mark` (
 
 LOCK TABLES `mark` WRITE;
 /*!40000 ALTER TABLE `mark` DISABLE KEYS */;
+INSERT INTO `mark` VALUES (1,'audi'),(2,'toyota'),(3,'opel'),(4,'peugeot');
 /*!40000 ALTER TABLE `mark` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -47,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-21 11:35:55
+-- Dump completed on 2022-11-22 10:44:51

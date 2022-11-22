@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `reservation`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `reservation` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
   `client_id` int NOT NULL,
   `vehicle_id` int NOT NULL,
   PRIMARY KEY (`id`),
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-21 11:35:56
+-- Dump completed on 2022-11-22 10:44:51

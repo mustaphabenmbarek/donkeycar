@@ -35,7 +35,7 @@ CREATE TABLE `client` (
   `tel_number` int DEFAULT NULL,
   `license_drivers` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +44,7 @@ CREATE TABLE `client` (
 
 LOCK TABLES `client` WRITE;
 /*!40000 ALTER TABLE `client` DISABLE KEYS */;
+INSERT INTO `client` VALUES (1,'Mr','prone','nomone','2000-01-01','rueone',75001,'Paris','pnomone@projet.com',102030405,'1234abcd'),(2,'Mr','ptwo','nomtwo','2001-02-02','ruetwo',75002,'Paris','pnomtwo@projet.com',103040506,'2345aabb'),(3,'Mme','pthree','nomthree','2002-03-03','ruethree',91200,'Juvisy','pnomthree@projet.com',104040404,'3344ccdd'),(4,'Mme','pfour','nomfour','2003-04-04','ruefour',75005,'Paris','pnomfour@projet.com',106060606,'0144444444');
 /*!40000 ALTER TABLE `client` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-21 11:35:55
+-- Dump completed on 2022-11-22 10:44:51
