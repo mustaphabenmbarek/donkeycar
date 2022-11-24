@@ -1,10 +1,12 @@
+<?php include_once('database.php'); ?>
+
 <?php
 	
 	 include_once('headerincluded.php'); 
 
 	$vide="";
 
-	$suppr=$bdd->prepare("DELETE FROM vehicules WHERE image = ?");
+	$suppr=$bdd->prepare("DELETE FROM vehicle WHERE image = ?");
 	$suppr->execute(array($vide));
 	$suppr->closeCursor();
 	

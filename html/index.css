@@ -1,0 +1,170 @@
+* {
+    font-family: "Orbitron", sans-serif;
+  }
+
+
+  #langues {
+    text-align: left;
+    padding: 10px;
+  }
+  select {
+    background: black;
+    color: white;
+  }
+
+
+  #logo {
+    text-align: center;
+  }
+  .fa-car {
+    font-size: 50px;
+    color: white;
+  }
+  #title {
+    background-image: url("https://focus.courrierinternational.com/2022/02/04/0/0/2400/1600/1280/0/60/0/f29e596_1644017662863-2021-03-09-2.jpg");
+    background-repeat: no-reapeat;
+    background-size: 100%;
+    background-position: 0 50%;
+    height: 500px;
+    text-align: center;
+    padding: 25px 0 0 0;
+  }
+  #menu {
+    background: black;
+  }
+  .no-underline:hover {
+    text-decoration: none;
+    color: #c7c7c7;
+    transform: scale(1.2);
+    align-items: center;
+  }
+  
+  nav {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  
+  nav ul {
+    list-style: none;
+    background: black;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  nav li {
+    display: inline-block;
+    position: relative;
+    min-width: 120px;
+  }
+  
+  nav li > a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-weight: 700;
+    padding: 20px 70px;
+  }
+  
+  nav ul li:hover ul {
+    display: block;
+  }
+  
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul ul a {
+    padding: 15px;
+  }
+  
+  /*responsive*/
+
+  @media screen and (max-width: 500x) {
+    nav li {
+      min-width: 100px;
+    }
+  }
+  #carousel {
+    background: black;
+    z-index: 1;
+    padding: 50px 0 100px 0;
+  }
+  #audi,
+  #lambo,
+  #fefe,
+  #porsche,
+  #mclaren,
+  #bentley,
+  #aston {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+  }
+  .item:hover {
+    transition-duration: 0.2s;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  #corp {
+    background-image: url("https://www.luxury-club.fr/wp-content/uploads/2019/10/location-voiture-de-luxe.jpg");
+    background-repeat: no-reapeat;
+    background-size: 100%;
+    background-position: 0 80%;
+    height: 700px;
+    text-align: center;
+    padding: 25px 0 0 0;
+  }
+  
+  #video {
+    margin-top: 130px;
+  }
+  #texte {
+    margin-top: 130px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 315px;
+    padding: 50px;
+    line-height: 30px;
+    color: white;
+  }
+  #contact {
+    background: black;
+    padding: 50px 0 100px 0;
+  }
+  #description {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 50px;
+  }
+  #infos {
+    text-align: right;
+  }
+  #des {
+    width: 360px;
+    height: 230px;
+    text-align: center;
+  }
+  #bouton {
+    margin: 10px;
+  }
+  #nom,
+  #prenom,
+  #phone,
+  #email {
+    width: 360px;
+    margin: 10px;
+    height: 30px;
+  }
+  #fin {
+    background: #303030;
+    color: white;
+    padding: 10px;
+  }
+  

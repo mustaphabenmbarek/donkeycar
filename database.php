@@ -1,6 +1,6 @@
 <?php
 
-use Database as GlobalDatabase;
+use Database as donkeycar;
 
 define ('ENV', 'test');
 
@@ -35,7 +35,7 @@ class DataBase
         $stmt -> execute();
     }
 
-    public static function insertReservation(
+    public static function insertreservation(
         array $data = [
             "id" => "",
             "start_date" => "",
@@ -72,20 +72,7 @@ class DataBase
 
         Database::bind($sql, $data);
     }
-
-    public static function insertmark(
-        array $data = [
-            "id" => "", 
-            "name_mark" => "", 
-        ]): void
-    {
-        $cols = implode(", ", array_keys($data));
-
-        $sql = "INSERT INTO mark (" . $cols . ") VALUES (:id, :name_mark)";
-
-        Database::bind($sql, $data);
-    }
-
+    
     public static function insertmodel(
         array $data = [
             "id" => "", 
@@ -148,6 +135,19 @@ class DataBase
         $cols = implode(", ", array_keys($data));
 
         $sql = "INSERT INTO office (" . $cols . ") VALUES (:id, :image_res, :vehicle_id, :reservation_id)";
+
+        Database::bind($sql, $data);
+    }
+
+    public static function insertmark(
+        array $data = [
+            "id" => "", 
+            "name_mark" => "", 
+        ]): void
+    {
+        $cols = implode(", ", array_keys($data));
+
+        $sql = "INSERT INTO `mark` VALUES (1,'audi'),(2,'toyota'),(3,'opel'),(4,'peugeot')";
 
         Database::bind($sql, $data);
     }
