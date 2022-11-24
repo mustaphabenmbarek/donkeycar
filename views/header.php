@@ -11,19 +11,28 @@
     <title>titre</title>
 </head>
 <body>
-    <header>
-        <H1>Donkeycar</H1>
-        <div class = "navbar">
-            <a href="viewacceuil.html">acceuil</a>
-            <a href="viewcars.html">nos véhicules</a>
+    <header class="container-fluid">
+        <div class = "row">
+
+            <div class="col-4">
+            <H1>Donkeycar</H1>
+            </div>
+
+            <div class="col-3">
+            <a href="views/viewaccueil.php">acceuil</a>
+            <a href="viewcars.php">nos véhicules</a>
+            </div>
+                <div class = "col-3">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+                
+        
+                    <button class="coll-2">
+                    <a href="viewconnexion.php"><img src="C:\Users\sionp\Desktop\DonkeyCar\img\arrow.svg" alt="connexion"></a> 
+                    </button>
+                </div>
+            
         </div>
-        <div class = "search">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
-        </div>
-    <button>
-        <a href="viewconnexion.php"><img src="C:\Users\sionp\Desktop\DonkeyCar\img\arrow.svg" alt="connexion"></a> 
-    </button>
     </header>
 
     

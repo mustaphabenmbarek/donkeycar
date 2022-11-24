@@ -1,40 +1,40 @@
-
-<?php require_once('C:\Users\sionp\Desktop\DonkeyCar\views\header.php');?>
+<?php require_once 'C:\Users\sionp\Desktop\DonkeyCar\views\header.php';
+?>
 
 <!-- location -->
     <div class = "container-fluid">
             <div class="row">
               <div class="col-sm-3">
                 <img src="" alt="v1">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v2">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v3">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v4">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v5">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v6">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v7">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               <div class="col-sm-3">
                 <img src="" alt="v8">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quibusdam cumque similique deleniti vitae sed obcaecati delectus corporis autem?</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
               
             </div>
