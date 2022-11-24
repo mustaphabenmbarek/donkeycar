@@ -16,30 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `model`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `model`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `model` (
+CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name_model` varchar(40) NOT NULL,
-  `mark_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_model_mark` (`mark_id`),
-  CONSTRAINT `fk_model_mark` FOREIGN KEY (`mark_id`) REFERENCES `mark` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `model`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `model` WRITE;
-/*!40000 ALTER TABLE `model` DISABLE KEYS */;
-INSERT INTO `model` VALUES (1,'Yaris',2),(2,'A3',1),(3,'3008',4),(4,'Astra',3);
-/*!40000 ALTER TABLE `model` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
