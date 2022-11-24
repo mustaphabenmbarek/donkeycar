@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <!-- CSS only -->
@@ -11,8 +12,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/html/index.css"> 
-<link rel="stylesheet" type="text/css" href="/html/index.js">
+<link rel="stylesheet" type="text/css" href="html\index.css"> 
+<link rel="stylesheet" type="text/css" href="html\index.js">
+
 
 
 <!-- En-tete -->
@@ -81,7 +83,7 @@
         <a href="#" class="no-underline">Nos offres</a>
         <ul>
             <li>
-            <a href="#" class="no-underline">Louer une supercar</a>
+            <a href="./views/cars.php" class="no-underline">Louer une supercar</a>
             </li>
         </ul>
         </li>
