@@ -7,14 +7,6 @@ class Office
     private int $postal_code;
     private string $city;
     
-    public function __construct(int $id, string $adress, int $postal_code, string $city)
-    {
-        $this->id = $id;
-        $this->adress = $adress;
-        $this->postal_code = $postal_code;
-        $this->city = $city;
-    }
-    
     public function getId(): int
     {
         return $this->id;
@@ -25,14 +17,29 @@ class Office
         return $this->adress;
     }
 
+    public function setAdress(string $adress): void
+    {
+        $this->adress = $adress;
+    }
+
     public function getPostalCode(): string
     {
         return $this->postal_code;
     }
 
+    public function setPostalCode(int $postal_code): void
+    {
+        $this->postal_code = $postal_code;
+    }
+
     public function getCity(): string
     {
         return $this->city;
+    }
+
+    public function setCity(string $city): void
+    {
+        $this->city = $city;
     }
 
 }
