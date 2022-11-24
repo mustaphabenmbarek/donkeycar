@@ -1,5 +1,5 @@
 
-<?php require 'header.php';?>
+<?php require_once('C:\Users\sionp\Desktop\DonkeyCar\views\header.php');?>
 
 <!-- location -->
     <div class = "container-fluid">

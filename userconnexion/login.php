@@ -1,16 +1,16 @@
 <?php
 
-require 'DBConnection-test.php';
+require '../DBConnection-test.php';
 
 if(!empty($_POST['username']) && !empty($_POST['password'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    var_dump($email);
+    var_dump($username);
     var_dump($password);
 
-    $c = $bd->prepare('SELECT * FROM users WHERE email = :email ');
-    $c->bindValue('email',$email);
+    $c = $bd->prepare('SELECT * FROM users WHERE username = :username ');
+    $c->bindValue('username',$username);
     $c->execute();
     $res = $c ->fetch(PDO::FETCH_ASSOC);
 

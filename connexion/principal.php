@@ -1,13 +1,3 @@
-<?php 
-  @$keywords=$_GET["keywords"];
-  @$valider=$_GET["valider"];
-    if(isset($valider) && !empty(trim($keywords))){
-  include("");
-  $res=$pdo->prepare("SELECT * FROM mark where mark like ? '%$keywords%");
-  $res->setFetchmod;
-    }
-  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
