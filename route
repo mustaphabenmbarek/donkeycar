@@ -1,0 +1,11 @@
+vehicle
+liste des vehicle : /vehicle/list
+ajouter un vehicle : /vehicle/add
+modifier un vehicle : /vehicle/edit/2
+supprimer un vehicle : /vehicle/delete/2
+
+model
+liste des model
+ajouter un model
+modifier un model
+supprimer un model
