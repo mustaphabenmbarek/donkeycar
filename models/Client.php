@@ -18,7 +18,6 @@ class Client
     // les méthodes
     public function __construct(int $id, string $tel_number)
     {
-        $this->id = $id;
         $this->tel_number = $tel_number;
     }
     
