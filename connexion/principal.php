@@ -1,10 +1,10 @@
 <?php 
   @$keywords=$_GET["keywords"];
-  @valider=$_GET["valider"];
+  @$valider=$_GET["valider"];
     if(isset($valider) && !empty(trim($keywords))){
   include("");
   $res=$pdo->prepare("SELECT * FROM mark where mark like ? '%$keywords%");
-  $res->setFetchmod
+  $res->setFetchmod;
 }
   ?>
 
@@ -43,11 +43,3 @@
 
 </body>
 </html>
-
-$passUser = password_hash($_POST['user_password'], PASSWORD_DEFAULT);
-password_verify($passUser, $user['pass_user'])
-<?php
-
-$mdp = 'toto2022';
-
-echo password_hash($mdp, PASSWORD_DEFAULT);
