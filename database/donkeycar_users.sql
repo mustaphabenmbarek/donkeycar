@@ -16,36 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `vehicle`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `vehicle`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `vehicle` (
+CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `registre_number` varchar(40) NOT NULL,
-  `color` varchar(40) NOT NULL,
-  `nbseat` int NOT NULL,
-  `date_circulation` datetime NOT NULL,
-  `price_day` float DEFAULT NULL,
-  `insurance` varchar(50) DEFAULT NULL,
-  `km` int DEFAULT NULL,
-  `model_id` int NOT NULL,
-  `fuel` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `model_id` (`model_id`),
-  CONSTRAINT `vehicle_ibfk_1` FOREIGN KEY (`model_id`) REFERENCES `model` (`id`)
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `vehicle`
+-- Dumping data for table `users`
 --
 
-LOCK TABLES `vehicle` WRITE;
-/*!40000 ALTER TABLE `vehicle` DISABLE KEYS */;
-/*!40000 ALTER TABLE `vehicle` ENABLE KEYS */;
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -58,4 +50,3 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2022-11-24 10:08:44
-
