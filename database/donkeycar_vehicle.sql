@@ -28,7 +28,7 @@ CREATE TABLE `vehicle` (
   `color` varchar(40) NOT NULL,
   `nbseat` int NOT NULL,
   `date_circulation` datetime NOT NULL,
-  `price_day` decimal(10,2) DEFAULT NULL,
+  `price_day` float DEFAULT NULL,
   `insurance` varchar(50) DEFAULT NULL,
   `km` int DEFAULT NULL,
   `model_id` int NOT NULL,
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-22 10:44:51
+-- Dump completed on 2022-11-24 10:08:44

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <!-- CSS only -->
@@ -11,8 +12,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="index.css"> 
-<link rel="stylesheet" type="text/css" href="index.js">
+<link rel="stylesheet" type="text/css" href="html\index.css"> 
+<link rel="stylesheet" type="text/css" href="html\index.js">
+
 
 
 <!-- En-tete -->
@@ -25,6 +27,26 @@
         <option>Français</option>
         </select>
     </div>
+    </head>
+<body>
+    <form action="verification.php" method="POST">
+        <h1>Connexion</h1>
+        
+        <label><b>Nom d'utilisateur</b></label>
+        <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+    
+        <label><b>Mot de passe</b></label>
+        <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+    
+        <input type="submit" id='submit' value='LOGIN' >
+        <?php
+        if(isset($_GET['erreur'])){
+        $err = $_GET['erreur'];
+        if($err==1 || $err==2)
+        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
+        }
+    ?>
+    
     <div id="logo" class="col-md-4">
     <i class="fas fa-car"></i>
     </div>
@@ -81,7 +103,7 @@
         <a href="#" class="no-underline">Nos offres</a>
         <ul>
             <li>
-            <a href="#" class="no-underline">Louer une supercar</a>
+            <a href="./views/cars.php" class="no-underline">Louer une supercar</a>
             </li>
         </ul>
         </li>
@@ -112,7 +134,8 @@
         <img id="lambo" src="https://www.tuningblog.eu/wp-content/uploads/2020/12/Strasse-Wheels-Lamborghini-Huracan-Performante-BiTurbo-6.jpg" />
     </div>
     <div class="item">
-        <img id="fefe" src="https://www.turbo.fr/sites/default/files/2019-09/ferrari-f8-tributo-essai-1.png" />
+        <img id="fefe" src="https://www.turbo.fr/sites/default/files/2019-09/ferrari-f8-tributo-essai-1.png"  /> 
+        
     </div>
     <div class="item">
         <img id="porsche" src="https://www.supersprint.com/public/img/01_low-444377-444443-444451-444459.jpg" />

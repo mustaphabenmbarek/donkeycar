@@ -102,15 +102,18 @@
   #mclaren,
   #bentley,
   #aston {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
+
+    float:left;
+    border:2; text-decoration:none;
+   width: 250px;
+   height: 200px;
+  margin-left: 10em;
+  margin-top: 5em;
+  margin-bottom: auto;
+  
   }
-  .item:hover {
-    transition-duration: 0.2s;
-    transform: scale(1.2);
-    cursor: pointer;
-  }
+
+
   #corp {
     background-image: url("https://www.luxury-club.fr/wp-content/uploads/2019/10/location-voiture-de-luxe.jpg");
     background-repeat: no-reapeat;
