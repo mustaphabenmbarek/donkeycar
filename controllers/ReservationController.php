@@ -34,8 +34,5 @@ class BookController
         include BASE_PATH . '/View/book/list.html.php';
         include BASE_PATH . '/View/footer.html.php';
     }
-
-
-
 ?>
 

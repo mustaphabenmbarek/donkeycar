@@ -45,6 +45,7 @@ CREATE TABLE `client` (
 LOCK TABLES `client` WRITE;
 /*!40000 ALTER TABLE `client` DISABLE KEYS */;
 INSERT INTO `client` VALUES (1,'Mr','prone','nomone','2000-01-01','rueone',75001,'Paris','pnomone@projet.com','102030405','1234abcd'),(2,'Mr','ptwo','nomtwo','2001-02-02','ruetwo',75002,'Paris','pnomtwo@projet.com','103040506','2345aabb'),(3,'Mme','pthree','nomthree','2002-03-03','ruethree',91200,'Juvisy','pnomthree@projet.com','104040404','3344ccdd'),(4,'Mme','pfour','nomfour','2003-04-04','ruefour',75005,'Paris','pnomfour@projet.com','106060606','0144444444');
+
 /*!40000 ALTER TABLE `client` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
